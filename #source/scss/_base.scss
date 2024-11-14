@@ -1,49 +1,7 @@
-$color-bg-dark: rgba(31, 34, 53, 1);
-$color-action-main: rgba(254, 70, 28, 1);
-$color-main-text-content: rgba(255, 255, 255, 1);
-$transition-anim-main: 300ms ease;
-$color-white: #fff;
-
 body {
   background-color: $color-bg-dark;
   font-family: Outfit;
   font-weight: 400;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-}
-
-@mixin button($padding-top-bot, $padding-rig-lef, $is-transparent: false) {
-  border: 2px $color-action-main solid;
-  border-radius: 4px;
-  padding: $padding-top-bot $padding-rig-lef;
-  background-color: $color-action-main;
-  font-family: Outfit;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: (15px / 16px);
-  text-align: center;
-  color: $color-main-text-content;
-  transition: background-color $transition-anim-main,
-    border-color $transition-anim-main;
-
-  @if $is-transparent {
-    background-color: transparent;
-    border-color: $color-white;
-
-    &:hover {
-      background-color: $color-action-main;
-      border-color: $color-action-main;
-    }
-  } @else {
-    &:hover {
-      background-color: transparent;
-      border-color: $color-white;
-    }
-  }
-}
-
-@mixin content-centered {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
