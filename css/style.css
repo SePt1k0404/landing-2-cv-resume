@@ -31,3 +31,81 @@ img {
 a {
   text-decoration: none;
 }
+
+body {
+  background-color: #1f2235;
+  font-family: Outfit;
+  font-weight: 400;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+}
+
+.header__wrapper {
+  max-width: 1350px;
+  padding: 22px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 50px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.header .navigation-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 27px;
+}
+
+.header .navigation-list__item {
+  padding: 6px 0;
+}
+
+.header .navigation-list a {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 0.9375;
+  text-align: left;
+  color: white;
+  -webkit-transition: color 300ms ease;
+  transition: color 300ms ease;
+}
+
+.header .navigation-list__item:hover a {
+  color: #fe461c;
+}
+
+.header__button {
+  border: 2px #fe461c solid;
+  border-radius: 4px;
+  padding: 17px 15px;
+  background-color: #fe461c;
+  font-family: Outfit;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 0.9375;
+  text-align: center;
+  color: white;
+  -webkit-transition: background-color 300ms ease, border-color 300ms ease;
+  transition: background-color 300ms ease, border-color 300ms ease;
+}
+
+.header__button:hover {
+  background-color: transparent;
+  border-color: #fff;
+}
