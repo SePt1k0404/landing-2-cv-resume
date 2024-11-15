@@ -1,6 +1,7 @@
 .header {
   &__wrapper {
     max-width: 1350px;
+    margin: 0 auto;
     padding: 22px 15px;
     @include content-centered;
     gap: 50px;
@@ -27,7 +28,8 @@
       color: $color-action-main;
     }
   }
-  &__button {
+
+  .button {
     @include button(17px, 15px, false);
   }
 }

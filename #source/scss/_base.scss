@@ -2,6 +2,11 @@ body {
   background-color: $color-bg-dark;
   font-family: Outfit;
   font-weight: 400;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
+  color: $color-main-text-content;
+}
+
+.section {
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
