@@ -1020,3 +1020,123 @@ body {
   background-color: #d9d9d9;
   border: 2px solid #fe461c;
 }
+
+.posts__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.posts__paragraph {
+  margin-bottom: 22px;
+}
+
+.posts__title {
+  margin-bottom: 60px;
+}
+
+.posts-list {
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, 424px);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 24px;
+     -moz-column-gap: 24px;
+          column-gap: 24px;
+  row-gap: 34px;
+}
+
+.posts-list__img-thumb {
+  width: 100%;
+  height: 315px;
+  background-color: #d9d9d9;
+  border-radius: 8px;
+  margin-bottom: 26px;
+}
+
+.posts-list__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 18px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-bottom: 23px;
+}
+
+.posts-list__info-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 9px;
+}
+
+.posts-list__info-item .posts-list__icon {
+  fill: #fe461c;
+}
+
+.posts-list__info-item:nth-child(1) .posts-list__icon {
+  width: 14px;
+  height: 17px;
+}
+
+.posts-list__info-item:nth-child(2) .posts-list__icon {
+  width: 16px;
+  height: 16px;
+}
+
+.posts-list__info-item:nth-child(3) .posts-list__icon {
+  width: 20px;
+  height: 14.67px;
+}
+
+.posts-list__info-text {
+  font-family: Public Sans;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 0.75;
+  text-align: left;
+}
+
+.posts-list__name {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.25;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.posts-list__text {
+  font-family: Public Sans;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  text-align: left;
+  width: 360px;
+}
