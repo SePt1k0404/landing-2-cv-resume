@@ -1,1 +1,7 @@
-$color-bg-dark: rgba(31, 34, 53, 1);
+body {
+  background-color: $color-bg-dark;
+  font-family: Outfit;
+  font-weight: 400;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}

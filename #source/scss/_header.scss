@@ -1,1 +1,33 @@
+.header {
+  &__wrapper {
+    max-width: 1350px;
+    padding: 22px 15px;
+    @include content-centered;
+    gap: 50px;
+    justify-content: flex-end;
+  }
+  .navigation-list {
+    @include content-centered;
+    gap: 27px;
 
+    &__item {
+      padding: 6px 0;
+    }
+
+    & a {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: (15px / 16px);
+      text-align: left;
+      color: $color-main-text-content;
+      transition: color $transition-anim-main;
+    }
+
+    &__item:hover a {
+      color: $color-action-main;
+    }
+  }
+  &__button {
+    @include button(17px, 15px, false);
+  }
+}
