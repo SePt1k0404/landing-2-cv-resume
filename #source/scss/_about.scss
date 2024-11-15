@@ -1,0 +1,69 @@
+.about {
+  background-color: $color-bg-light;
+  &__wrapper {
+    padding-top: 160px;
+    padding-bottom: 33px;
+    @include content-centered;
+    align-items: flex-start;
+  }
+  &__img-thumb {
+    padding-top: 107px;
+    max-width: 600px;
+    img {
+      width: 100%;
+    }
+  }
+  &__main-content {
+    margin-left: auto;
+    margin-right: clamp(15px, calc(122px - (1320px - 100vw) / 2), 122px);
+    max-width: 536px;
+    .button.main {
+      @include button(20px, 19px, false);
+    }
+  }
+  &__paragraph {
+    margin-bottom: 19px;
+  }
+  &__title {
+    margin-bottom: 15px;
+  }
+  &__desc {
+    max-width: 524px;
+    font-family: Public Sans;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: (26px / 16px);
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  .personal-advantage-list {
+    margin-bottom: 38px;
+    width: 534px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-auto-flow: column;
+    gap: 26px 54px;
+    &__text {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: (26px / 16px);
+      text-align: left;
+      span {
+        font-family: Public Sans;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: (26px / 16px);
+        text-align: left;
+        &:before {
+          content: ":";
+          margin: 0 7px;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: (26px / 16px);
+          text-align: left;
+        }
+      }
+    }
+  }
+}

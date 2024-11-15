@@ -1,6 +1,7 @@
 .header {
   &__wrapper {
     max-width: 1350px;
+    margin: 0 auto;
     padding: 22px 15px;
     @include content-centered;
     gap: 50px;
@@ -23,11 +24,13 @@
       transition: color $transition-anim-main;
     }
 
-    &__item:hover a {
+    &__item:hover a,
+    &__item:focus a {
       color: $color-action-main;
     }
   }
-  &__button {
+
+  .button {
     @include button(17px, 15px, false);
   }
 }

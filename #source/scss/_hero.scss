@@ -1,0 +1,108 @@
+.hero {
+  position: relative;
+  background-image: url("../../images/hero/background-img.png");
+  background-size: 783px 634px;
+  background-position: calc(
+      100% -
+        clamp(
+          15px,
+          calc(202px - (1920px - 100vw) / 2),
+          calc(202px + (100vw - 1920px) / 2)
+        )
+    )
+    calc(100% - 24px);
+  background-repeat: no-repeat;
+
+  .social-list {
+    position: absolute;
+    left: clamp(
+      15px,
+      calc(47px - (1920px - 100vw) / 2),
+      calc(47px + (100vw - 1920px) / 2)
+    );
+    top: 353px;
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+      width: 50px;
+      height: 50px;
+      border-radius: 4px;
+      background-color: $color-bg-light;
+      @include content-centered;
+    }
+    &__icon {
+      @include content-centered;
+      &:nth-child(1) {
+        width: 22px;
+        height: 23px;
+      }
+      &:nth-child(2) {
+        width: 20px;
+        height: 15px;
+      }
+      &:nth-child(3) {
+        width: 20px;
+        height: 15px;
+      }
+    }
+  }
+  &__wrapper {
+    padding-top: 263px - 22px;
+    padding-bottom: 225px;
+  }
+  &__main-content {
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-image: url(../../images/hero/ellipse.png);
+      width: 204px;
+      height: 204px;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &__text {
+    margin-bottom: 16px;
+    font-family: Public Sans;
+    font-size: 16px;
+    font-weight: 900;
+    line-height: (20px / 16px);
+    letter-spacing: 0.15em;
+    text-align: left;
+  }
+  &__title {
+    font-size: 64px;
+    font-weight: 600;
+    line-height: (72px / 64px);
+    text-align: left;
+    margin-bottom: 31px;
+    span {
+      color: $color-action-main;
+    }
+  }
+  &__desc {
+    font-family: Public Sans;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: (30px / 16px);
+    text-align: left;
+    margin-bottom: 36px;
+  }
+  &__buttons-wrapper {
+    @include content-centered;
+    gap: 23px;
+    justify-content: flex-start;
+
+    .button {
+      &.main {
+        @include button(18px, 47px, false);
+      }
+      &.second {
+        @include button(18px, 18px, true);
+      }
+    }
+  }
+}

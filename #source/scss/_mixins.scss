@@ -1,4 +1,5 @@
 @mixin button($padding-top-bot, $padding-rig-lef, $is-transparent: false) {
+  display: inline-block;
   border: 2px $color-action-main solid;
   border-radius: 4px;
   padding: $padding-top-bot $padding-rig-lef;
