@@ -9,6 +9,7 @@
   font-weight: 700;
   line-height: (15px / 16px);
   text-align: center;
+  white-space: nowrap;
   color: $color-main-text-content;
   transition: background-color $transition-anim-main,
     border-color $transition-anim-main;
