@@ -1,0 +1,77 @@
+.advantages {
+  background-color: $color-bg-light;
+  &__wrapper {
+    @include content-centered;
+    flex-direction: column;
+  }
+  &__paragraph {
+    margin-bottom: 17px;
+  }
+  &__title {
+    margin-bottom: 55px;
+  }
+
+  .advantages-list-wrapper {
+    @include content-centered;
+  }
+
+  .advantages-list {
+    @include content-centered;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 30px;
+    &__item {
+      max-width: 307px;
+      padding: 41px 39px 41px 25px;
+      background-color: $color-bg-dark;
+      border-radius: 8px;
+    }
+    &__title {
+      display: flex;
+      flex-direction: column;
+      gap: 26px;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: (25px / 20px);
+      text-align: left;
+      margin-bottom: 27px;
+      &.graphic:before {
+        content: url("../../images/advantages/graphic.png");
+      }
+      &.web-develop:before {
+        content: url("../../images/advantages/develop.png");
+      }
+      &.ui-design:before {
+        content: url("../../images/advantages/ui-design.png");
+      }
+      &.web-design:before {
+        content: url("../../images/advantages/web-design.png");
+      }
+    }
+    &__desc {
+      font-family: Public Sans;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: (24px / 16px);
+      text-align: left;
+      margin-bottom: 37px;
+    }
+    &__btn {
+      box-shadow: 0px 0px 24px 0px rgba(15, 16, 24, 0.42);
+      border-radius: 50%;
+      @include content-centered;
+      width: 45px;
+      height: 45px;
+      transition: background-color $transition-anim-main;
+      &:hover,
+      &:focus {
+        background-color: $color-action-main;
+      }
+      &-icon {
+        width: 14px;
+        height: 16px;
+        @include content-centered;
+      }
+    }
+  }
+}
