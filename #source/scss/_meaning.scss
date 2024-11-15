@@ -1,0 +1,74 @@
+.meaning {
+  background-color: $color-bg-light;
+  &__wrapper {
+    @include content-centered;
+    flex-direction: column;
+  }
+  &__paragraph {
+    margin-bottom: 24px;
+  }
+  &__title {
+    margin-bottom: 50px;
+  }
+
+  .meaning-list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 424px);
+    gap: 24px;
+    justify-content: center;
+    &__content-wrapper {
+      position: relative;
+      padding: 40px 45px 30px 42px;
+      background-color: $color-bg-dark;
+      &:after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: translateY(50%);
+        content: url("../../images/testimonial/triangle-icon.png");
+        width: 100px;
+        height: 100px;
+      }
+    }
+    &__name {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: (22px / 24px);
+      text-align: left;
+      margin-bottom: 15px;
+    }
+    &__icon {
+      position: absolute;
+      right: 97px;
+      top: 37px;
+    }
+    &__role {
+      font-family: Public Sans;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: (24px / 16px);
+      text-align: left;
+      padding-bottom: 14px;
+      margin-bottom: 15px;
+      width: 290px;
+      border-bottom: 1px solid $color-main-text-content;
+    }
+    &__text {
+      font-family: Roboto;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: (26px / 16px);
+      text-align: left;
+      width: 337px;
+    }
+    &__img-thumb {
+      margin-top: 42px;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background-color: rgba(217, 217, 217, 1);
+      border: 2px solid $color-action-main;
+    }
+  }
+}
