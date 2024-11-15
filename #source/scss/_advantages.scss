@@ -11,17 +11,14 @@
     margin-bottom: 55px;
   }
 
-  .advantages-list-wrapper {
-    @include content-centered;
-  }
-
   .advantages-list {
-    @include content-centered;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 307px);
     gap: 30px;
+    justify-content: center;
+
     &__item {
-      max-width: 307px;
       padding: 41px 39px 41px 25px;
       background-color: $color-bg-dark;
       border-radius: 8px;
