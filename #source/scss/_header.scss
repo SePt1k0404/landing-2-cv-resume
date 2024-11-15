@@ -24,7 +24,8 @@
       transition: color $transition-anim-main;
     }
 
-    &__item:hover a {
+    &__item:hover a,
+    &__item:focus a {
       color: $color-action-main;
     }
   }
