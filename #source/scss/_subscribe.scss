@@ -7,10 +7,17 @@
     padding: 130px 50px 130px 80px;
     @include content-centered;
     justify-content: space-between;
+    gap: 20px;
     @media (max-width: 960px) {
       flex-direction: column;
       gap: 50px;
       align-items: flex-start;
+      padding: 100px 30px;
+    }
+  }
+  &__main-content-wrapper {
+    @media (max-width: 960px) {
+      width: 100%;
     }
   }
   &__paragraph {
@@ -21,6 +28,9 @@
     text-align: left;
     margin-bottom: 9px;
     width: 433px;
+    @media (max-width: 960px) {
+      width: 100%;
+    }
   }
   &__text {
     font-size: 55px;
@@ -28,6 +38,23 @@
     line-height: (55px / 55px);
     text-align: left;
     margin-bottom: 12px;
+    @media (max-width: 960px) {
+      width: 100%;
+      font-size: 45px;
+      line-height: (45px / 45px);
+    }
+    @media (max-width: 534px) {
+      font-size: 35px;
+      line-height: (35px / 35px);
+    }
+  }
+  &__desc {
+    font-family: Public Sans;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: (21.15px / 18px);
+    text-align: left;
+    width: 100%;
   }
   &__form {
     position: relative;
@@ -35,6 +62,7 @@
     min-width: 360px;
     @media (max-width: 960px) {
       width: 100%;
+      min-width: auto;
     }
     input {
       width: 100%;
@@ -64,6 +92,10 @@
       &:hover {
         color: $color-action-main;
         border-color: $color-action-main;
+      }
+      @media (max-width: 534px) {
+        margin-top: 20px;
+        position: static;
       }
     }
   }

@@ -18,6 +18,10 @@
     width: 100%;
     align-items: flex-start;
     margin-bottom: 80px;
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      gap: 40px;
+    }
   }
   &__map-img {
     width: 100%;
@@ -29,6 +33,11 @@
   @include content-centered;
   flex-direction: column;
   gap: 20px;
+  @media (max-width: 1024px) {
+    width: 100%;
+    flex-grow: 1;
+    gap: 35px;
+  }
   &__card {
     @include content-centered;
     gap: 19px;
@@ -37,6 +46,10 @@
     background-color: $color-bg-light;
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 8px;
+    @media (max-width: 1024px) {
+      width: 100%;
+      flex-grow: 1;
+    }
   }
   &__icon-thumb {
     flex-shrink: 0;
@@ -59,12 +72,15 @@
     font-weight: 300;
     line-height: (24px / 16px);
     text-align: left;
-    text-shadow: 0px 0px 24px 0px rgba(179, 181, 191, 0.42);
+    word-break: break-word;
   }
 }
 
 .contact-form {
   flex-grow: 1;
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
   &__title {
     font-size: 24px;
     font-weight: 600;
@@ -77,6 +93,10 @@
     @include content-centered;
     gap: 30px;
     margin-bottom: 18px;
+    @media (max-width: 524px) {
+      flex-direction: column;
+      gap: 18px;
+    }
     input {
       color: $color-main-text-content;
       width: 100%;

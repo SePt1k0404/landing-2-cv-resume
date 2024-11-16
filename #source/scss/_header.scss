@@ -7,10 +7,19 @@
     gap: 50px;
     justify-content: flex-end;
   }
+  .burger {
+    margin-right: auto;
+    display: none;
+    @media (max-width: 852px) {
+      display: block;
+    }
+  }
   .navigation-list {
     @include content-centered;
     gap: 27px;
-
+    @media (max-width: 852px) {
+      display: none;
+    }
     &__item {
       padding: 6px 0;
     }
