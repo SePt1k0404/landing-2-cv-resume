@@ -65,6 +65,17 @@ body {
   text-align: left;
 }
 
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
 .header__wrapper {
   max-width: 1350px;
   margin: 0 auto;
@@ -1045,7 +1056,7 @@ body {
   margin-bottom: 60px;
 }
 
-.posts-list {
+.posts .posts-list {
   display: -ms-grid;
   display: grid;
   width: 100%;
@@ -1059,7 +1070,7 @@ body {
   row-gap: 34px;
 }
 
-.posts-list__img-thumb {
+.posts .posts-list__img-thumb {
   width: 100%;
   height: 315px;
   background-color: #d9d9d9;
@@ -1067,7 +1078,7 @@ body {
   margin-bottom: 26px;
 }
 
-.posts-list__info {
+.posts .posts-list__info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1084,7 +1095,7 @@ body {
   margin-bottom: 23px;
 }
 
-.posts-list__info-item {
+.posts .posts-list__info-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1097,26 +1108,26 @@ body {
   gap: 9px;
 }
 
-.posts-list__info-item .posts-list__icon {
+.posts .posts-list__info-item .posts-list__icon {
   fill: #fe461c;
 }
 
-.posts-list__info-item:nth-child(1) .posts-list__icon {
+.posts .posts-list__info-item:nth-child(1) .posts-list__icon {
   width: 14px;
   height: 17px;
 }
 
-.posts-list__info-item:nth-child(2) .posts-list__icon {
+.posts .posts-list__info-item:nth-child(2) .posts-list__icon {
   width: 16px;
   height: 16px;
 }
 
-.posts-list__info-item:nth-child(3) .posts-list__icon {
+.posts .posts-list__info-item:nth-child(3) .posts-list__icon {
   width: 20px;
   height: 14.67px;
 }
 
-.posts-list__info-text {
+.posts .posts-list__info-text {
   font-family: Public Sans;
   font-size: 16px;
   font-weight: 500;
@@ -1124,7 +1135,7 @@ body {
   text-align: left;
 }
 
-.posts-list__name {
+.posts .posts-list__name {
   font-size: 24px;
   font-weight: 600;
   line-height: 1.25;
@@ -1132,11 +1143,119 @@ body {
   margin-bottom: 10px;
 }
 
-.posts-list__text {
+.posts .posts-list__text {
   font-family: Public Sans;
   font-size: 16px;
   font-weight: 300;
   line-height: 1.5;
   text-align: left;
   width: 360px;
+}
+
+.subscribe {
+  background-color: #24263b;
+  padding: 120px 15px;
+}
+
+.subscribe__wrapper {
+  background-color: #1f2235;
+  border-radius: 8px;
+  padding: 130px 50px 130px 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 960px) {
+  .subscribe__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 50px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.subscribe__paragraph {
+  font-family: Public Sans;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.175;
+  text-align: left;
+  margin-bottom: 9px;
+  width: 433px;
+}
+
+.subscribe__text {
+  font-size: 55px;
+  font-weight: 700;
+  line-height: 1;
+  text-align: left;
+  margin-bottom: 12px;
+}
+
+.subscribe__form {
+  position: relative;
+  width: 550px;
+  min-width: 360px;
+}
+
+@media (max-width: 960px) {
+  .subscribe__form {
+    width: 100%;
+  }
+}
+
+.subscribe__form input {
+  width: 100%;
+  padding: 20px;
+  background-color: white;
+  border: none;
+  border-radius: 80px;
+}
+
+.subscribe__form button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  display: inline-block;
+  border: 2px #fe461c solid;
+  border-radius: 4px;
+  padding: 23px 53px;
+  background-color: #fe461c;
+  font-family: Outfit;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 0.9375;
+  text-align: center;
+  white-space: nowrap;
+  color: white;
+  -webkit-transition: background-color 300ms ease, border-color 300ms ease;
+  transition: background-color 300ms ease, border-color 300ms ease;
+  border-radius: 80px;
+  -webkit-transition: color 300ms ease, background-color 300ms ease, border-color 300ms ease;
+  transition: color 300ms ease, background-color 300ms ease, border-color 300ms ease;
+}
+
+.subscribe__form button:hover {
+  background-color: transparent;
+  border-color: #fff;
+}
+
+.subscribe__form button:hover {
+  color: #fe461c;
+  border-color: #fe461c;
 }
