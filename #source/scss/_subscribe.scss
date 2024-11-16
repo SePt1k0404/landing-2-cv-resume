@@ -1,0 +1,70 @@
+.subscribe {
+  background-color: $color-bg-light;
+  padding: 120px 15px;
+  &__wrapper {
+    background-color: $color-bg-dark;
+    border-radius: 8px;
+    padding: 130px 50px 130px 80px;
+    @include content-centered;
+    justify-content: space-between;
+    @media (max-width: 960px) {
+      flex-direction: column;
+      gap: 50px;
+      align-items: flex-start;
+    }
+  }
+  &__paragraph {
+    font-family: Public Sans;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: (28.2px / 24px);
+    text-align: left;
+    margin-bottom: 9px;
+    width: 433px;
+  }
+  &__text {
+    font-size: 55px;
+    font-weight: 700;
+    line-height: (55px / 55px);
+    text-align: left;
+    margin-bottom: 12px;
+  }
+  &__form {
+    position: relative;
+    width: 550px;
+    min-width: 360px;
+    @media (max-width: 960px) {
+      width: 100%;
+    }
+    input {
+      width: 100%;
+      padding: 20px;
+      background-color: $color-main-text-content;
+      border: none;
+      border-radius: 80px;
+      &::placeholder {
+        font-family: Lato;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: (19.2px / 16px);
+        text-align: left;
+        color: rgba(157, 161, 180, 1);
+      }
+    }
+    button {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      height: 100%;
+      @include button(23px, 53px, false);
+      border-radius: 80px;
+      transition: color $transition-anim-main,
+        background-color $transition-anim-main,
+        border-color $transition-anim-main;
+      &:hover {
+        color: $color-action-main;
+        border-color: $color-action-main;
+      }
+    }
+  }
+}
