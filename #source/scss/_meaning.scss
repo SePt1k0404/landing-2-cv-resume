@@ -17,6 +17,12 @@
     grid-template-columns: repeat(auto-fit, 424px);
     gap: 24px;
     justify-content: center;
+    @media (max-width: 498px) {
+      grid-template-columns: repeat(auto-fit, 400px);
+    }
+    @media (max-width: 468px) {
+      grid-template-columns: 1fr;
+    }
     &__content-wrapper {
       position: relative;
       padding: 40px 45px 30px 42px;
@@ -42,6 +48,10 @@
       position: absolute;
       right: 97px;
       top: 37px;
+      @media (max-width: 498px) {
+        right: 25px;
+        top: 25px;
+      }
     }
     &__role {
       font-family: Public Sans;
@@ -52,6 +62,9 @@
       padding-bottom: 14px;
       margin-bottom: 15px;
       width: 290px;
+      @media (max-width: 498px) {
+        width: 100%;
+      }
       border-bottom: 1px solid $color-main-text-content;
     }
     &__text {
@@ -61,6 +74,9 @@
       line-height: (26px / 16px);
       text-align: left;
       width: 337px;
+      @media (max-width: 498px) {
+        width: 100%;
+      }
     }
     &__img-thumb {
       margin-top: 42px;

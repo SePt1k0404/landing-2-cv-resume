@@ -15,6 +15,7 @@
   .works-wrapper-type {
     margin-bottom: 36px;
     @include content-centered;
+    flex-wrap: wrap;
     gap: 47px;
     &__item {
       padding: 5px 0;
@@ -39,6 +40,36 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 260px);
     gap: 24px;
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 260px);
+      gap: 15px;
+      .work-wrapper-example__item {
+        height: auto;
+        &:nth-child(2) {
+          grid-column: auto;
+          grid-row: auto;
+        }
+        &:nth-child(4) {
+          grid-column: auto;
+          grid-row: auto;
+        }
+        &:nth-child(5) {
+          grid-row: auto;
+        }
+        &:nth-child(6) {
+          grid-column: auto;
+          grid-row: auto;
+        }
+      }
+    }
+    @media (max-width: 468px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      .work-wrapper-example__item {
+        height: 260px;
+      }
+    }
     &__item {
       display: flex;
       justify-content: flex-end;

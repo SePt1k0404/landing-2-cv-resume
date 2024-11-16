@@ -12,7 +12,6 @@
     )
     calc(100% - 24px);
   background-repeat: no-repeat;
-
   .social-list {
     position: absolute;
     left: clamp(
@@ -21,6 +20,12 @@
       calc(47px + (100vw - 1920px) / 2)
     );
     top: 353px;
+    @media (max-width: 1560px) {
+      display: flex;
+      gap: 15px;
+      top: 100%;
+      transform: translateY(-100%);
+    }
     &__item {
       &:not(:last-child) {
         margin-bottom: 15px;
@@ -79,6 +84,10 @@
     line-height: (72px / 64px);
     text-align: left;
     margin-bottom: 31px;
+    @media (max-width: 768px) {
+      font-size: 46px;
+      line-height: (52px / 46px);
+    }
     span {
       color: $color-action-main;
     }
@@ -102,6 +111,15 @@
       }
       &.second {
         @include button(18px, 18px, true);
+      }
+    }
+    @media (max-width: 450px) {
+      flex-direction: column;
+      align-items: flex-start;
+      .button {
+        &.second {
+          width: 153px;
+        }
       }
     }
   }

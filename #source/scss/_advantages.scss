@@ -17,7 +17,9 @@
     grid-template-columns: repeat(auto-fit, 307px);
     gap: 30px;
     justify-content: center;
-
+    @media (max-width: 468px) {
+      grid-template-columns: repeat(auto-fit, 257px);
+    }
     &__item {
       padding: 41px 39px 41px 25px;
       background-color: $color-bg-dark;
